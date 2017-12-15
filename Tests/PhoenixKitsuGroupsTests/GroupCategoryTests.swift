@@ -6,7 +6,7 @@ class GroupCategoryTests: XCTestCase {
 
   let fullyFilledJSON: [String : Any] = [
     "id": "1",
-    "type": "group-categories",
+    "type": "groupCategories",
     "links": [
       "self": "https://kitsu.io/api/edge/group-categories/1"
     ],
@@ -21,7 +21,7 @@ class GroupCategoryTests: XCTestCase {
   
   let validMissingDataJSON: [String : Any] = [
     "id": "1",
-    "type": "group-categories",
+    "type": "groupCategories",
     "links": [
       "self": "https://kitsu.io/api/edge/group-categories/1"
     ],
@@ -35,7 +35,7 @@ class GroupCategoryTests: XCTestCase {
   
   let validNilDataJSON: [String : Any?] = [
     "id": "1",
-    "type": "group-categories",
+    "type": "groupCategories",
     "links": [
       "self": "https://kitsu.io/api/edge/group-categories/1"
     ],
@@ -50,7 +50,7 @@ class GroupCategoryTests: XCTestCase {
   
   let invalidMissingDataJSON: [String : Any] = [
     "id": "1",
-    "type": "group-categories",
+    "type": "groupCategories",
     "links": [
       "self": "https://kitsu.io/api/edge/group-categories/1"
     ],
@@ -64,7 +64,7 @@ class GroupCategoryTests: XCTestCase {
   
   let invalidNilDataJSON: [String : Any?] = [
     "id": nil,
-    "type": "group-categories",
+    "type": "groupCategories",
     "links": [
       "self": "https://kitsu.io/api/edge/group-categories/1"
     ],
@@ -101,7 +101,7 @@ class GroupCategoryTests: XCTestCase {
     XCTAssertNotNil(groupCategory)
     
     XCTAssertEqual(groupCategory?.objectID, "1")
-    XCTAssertEqual(groupCategory?.type, "group-categories")
+    XCTAssertEqual(groupCategory?.type, "groupCategories")
     
     XCTAssertNotNil(groupCategory?.links)
     
@@ -128,7 +128,7 @@ class GroupCategoryTests: XCTestCase {
     XCTAssertNotNil(groupCategory)
     
     XCTAssertEqual(groupCategory?.objectID, "1")
-    XCTAssertEqual(groupCategory?.type, "group-categories")
+    XCTAssertEqual(groupCategory?.type, "groupCategories")
     
     XCTAssertNotNil(groupCategory?.links)
     
@@ -155,7 +155,7 @@ class GroupCategoryTests: XCTestCase {
     XCTAssertNotNil(groupCategory)
     
     XCTAssertEqual(groupCategory?.objectID, "1")
-    XCTAssertEqual(groupCategory?.type, "group-categories")
+    XCTAssertEqual(groupCategory?.type, "groupCategories")
     
     XCTAssertNotNil(groupCategory?.links)
     
