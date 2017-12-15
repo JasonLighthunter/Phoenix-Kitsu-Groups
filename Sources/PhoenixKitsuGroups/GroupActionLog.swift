@@ -21,15 +21,3 @@ public class GroupActionLogAttributes: KitsuObjectAttributesWithCreatedAt {
   public let updatedAt: String?
   public let verb: String
 }
-
-//"id": "647",
-//"type": "groupActionLogs",
-//"links": {
-//  "self": "https://kitsu.io/api/edge/group-action-logs/647"
-//},
-//"attributes": {
-//  "createdAt": "2017-03-12T16:40:59.662Z",
-//  "updatedAt": "2017-03-12T16:40:59.662Z",
-//  "verb": "about_changed"
-//},
-
