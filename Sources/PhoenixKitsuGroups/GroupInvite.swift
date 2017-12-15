@@ -1,7 +1,7 @@
 import PhoenixKitsuCore
 
 public class GroupInvite: KitsuObject {
-  public static var requestURLString = "group-bans"
+  public static var requestURLString = "group-invites"
   
   public let objectID: String
   public let type: String
