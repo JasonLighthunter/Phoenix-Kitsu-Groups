@@ -3,11 +3,7 @@ import XCTest
 
 class GroupCategoryTests: XCTestCase {
   let decoder = JSONDecoder()
-//  public let createdAt: String
-//  public let updatedAt: String
-//  public let name: String
-//  public let slug: String
-//  public let description: String?
+
   let fullyFilledJSON: [String : Any] = [
     "id": "1",
     "type": "group-categories",
