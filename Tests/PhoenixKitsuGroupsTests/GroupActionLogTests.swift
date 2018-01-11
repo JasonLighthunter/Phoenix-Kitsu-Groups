@@ -54,7 +54,7 @@ class GroupActionLogTests: XCTestCase {
   ]
   
   let invalidNilDataJSON: [String : Any?] = [
-    "id": nil,
+    "id": "1",
     "type": "groupActionLogs",
     "links": [
       "self": "https://kitsu.io/api/edge/group-action-logs/1"
@@ -160,8 +160,16 @@ class GroupActionLogTests: XCTestCase {
     } else {
       groupActionLog = nil
     }
+    groupActionLogAttributes = groupActionLog?.attributes
     
-    XCTAssertNil(groupActionLog)
+    XCTAssertNotNil(groupActionLog)
+    
+    XCTAssertEqual(groupActionLog?.objectID, "1")
+    XCTAssertEqual(groupActionLog?.type, "groupActionLogs")
+    
+    XCTAssertNotNil(groupActionLog?.links)
+    
+    XCTAssertNil(groupActionLogAttributes)
   }
   
   func testGroupActionLogInvalidNilData() {
@@ -173,8 +181,16 @@ class GroupActionLogTests: XCTestCase {
     } else {
       groupActionLog = nil
     }
+    groupActionLogAttributes = groupActionLog?.attributes
     
-    XCTAssertNil(groupActionLog)
+    XCTAssertNotNil(groupActionLog)
+    
+    XCTAssertEqual(groupActionLog?.objectID, "1")
+    XCTAssertEqual(groupActionLog?.type, "groupActionLogs")
+    
+    XCTAssertNotNil(groupActionLog?.links)
+    
+    XCTAssertNil(groupActionLogAttributes)
   }
 }
 

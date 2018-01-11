@@ -170,8 +170,16 @@ class GroupMemberNoteTests: XCTestCase {
     } else {
       groupMemberNote = nil
     }
+    groupMemberNoteAttributes = groupMemberNote?.attributes
     
-    XCTAssertNil(groupMemberNote)
+    XCTAssertNotNil(groupMemberNote)
+    
+    XCTAssertEqual(groupMemberNote?.objectID, "1")
+    XCTAssertEqual(groupMemberNote?.type, "groupMemberNotes")
+    
+    XCTAssertNotNil(groupMemberNote?.links)
+    
+    XCTAssertNil(groupMemberNoteAttributes)
   }
   
   func testGroupMemberNoteInvalidNilData() {
@@ -183,8 +191,16 @@ class GroupMemberNoteTests: XCTestCase {
     } else {
       groupMemberNote = nil
     }
+    groupMemberNoteAttributes = groupMemberNote?.attributes
     
-    XCTAssertNil(groupMemberNote)
+    XCTAssertNotNil(groupMemberNote)
+    
+    XCTAssertEqual(groupMemberNote?.objectID, "1")
+    XCTAssertEqual(groupMemberNote?.type, "groupMemberNotes")
+    
+    XCTAssertNotNil(groupMemberNote?.links)
+    
+    XCTAssertNil(groupMemberNoteAttributes)
   }
 }
 

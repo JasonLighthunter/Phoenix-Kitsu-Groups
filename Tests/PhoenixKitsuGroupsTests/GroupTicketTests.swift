@@ -162,8 +162,16 @@ class GroupTicketTests: XCTestCase {
     } else {
       groupTicket = nil
     }
+    groupTicketAttributes = groupTicket?.attributes
     
-    XCTAssertNil(groupTicket)
+    XCTAssertNotNil(groupTicket)
+    
+    XCTAssertEqual(groupTicket?.objectID, "1")
+    XCTAssertEqual(groupTicket?.type, "groupTickets")
+    
+    XCTAssertNotNil(groupTicket?.links)
+    
+    XCTAssertNil(groupTicketAttributes)
   }
   
   func testGroupTicketInvalidNilData() {
@@ -175,8 +183,16 @@ class GroupTicketTests: XCTestCase {
     } else {
       groupTicket = nil
     }
+    groupTicketAttributes = groupTicket?.attributes
     
-    XCTAssertNil(groupTicket)
+    XCTAssertNotNil(groupTicket)
+    
+    XCTAssertEqual(groupTicket?.objectID, "1")
+    XCTAssertEqual(groupTicket?.type, "groupTickets")
+    
+    XCTAssertNotNil(groupTicket?.links)
+    
+    XCTAssertNil(groupTicketAttributes)
   }
 }
 

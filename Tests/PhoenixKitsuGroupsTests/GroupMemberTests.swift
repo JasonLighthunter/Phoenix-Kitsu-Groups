@@ -58,7 +58,7 @@ class GroupMemberTests: XCTestCase {
   ]
   
   let invalidNilDataJSON: [String : Any?] = [
-    "id": nil,
+    "id": "1",
     "type": "group-members",
     "links": [
       "self": "https://kitsu.io/api/edge/group-members/1"
@@ -168,8 +168,16 @@ class GroupMemberTests: XCTestCase {
     } else {
       groupMember = nil
     }
+    groupMemberAttributes = groupMember?.attributes
     
-    XCTAssertNil(groupMember)
+    XCTAssertNotNil(groupMember)
+    
+    XCTAssertEqual(groupMember?.objectID, "1")
+    XCTAssertEqual(groupMember?.type, "group-members")
+    
+    XCTAssertNotNil(groupMember?.links)
+    
+    XCTAssertNil(groupMemberAttributes)
   }
   
   func testGroupMemberInvalidNilData() {
@@ -181,8 +189,16 @@ class GroupMemberTests: XCTestCase {
     } else {
       groupMember = nil
     }
+    groupMemberAttributes = groupMember?.attributes
     
-    XCTAssertNil(groupMember)
+    XCTAssertNotNil(groupMember)
+    
+    XCTAssertEqual(groupMember?.objectID, "1")
+    XCTAssertEqual(groupMember?.type, "group-members")
+    
+    XCTAssertNotNil(groupMember?.links)
+    
+    XCTAssertNil(groupMemberAttributes)
   }
 }
 

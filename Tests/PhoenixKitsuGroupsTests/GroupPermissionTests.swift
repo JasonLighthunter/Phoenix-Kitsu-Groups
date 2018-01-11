@@ -56,7 +56,7 @@ class GroupPermissionTests: XCTestCase {
   ]
   
   let invalidNilDataJSON: [String : Any?] = [
-    "id": nil,
+    "id": "1",
     "type": "group-permissions",
     "links": [
       "self": "https://kitsu.io/api/edge/group-permissions/1"
@@ -162,8 +162,16 @@ class GroupPermissionTests: XCTestCase {
     } else {
       groupPermission = nil
     }
+    groupPermissionAttributes = groupPermission?.attributes
     
-    XCTAssertNil(groupPermission)
+    XCTAssertNotNil(groupPermission)
+    
+    XCTAssertEqual(groupPermission?.objectID, "1")
+    XCTAssertEqual(groupPermission?.type, "group-permissions")
+    
+    XCTAssertNotNil(groupPermission?.links)
+    
+    XCTAssertNil(groupPermissionAttributes)
   }
   
   func testGroupPermissionInvalidNilData() {
@@ -175,8 +183,16 @@ class GroupPermissionTests: XCTestCase {
     } else {
       groupPermission = nil
     }
+    groupPermissionAttributes = groupPermission?.attributes
     
-    XCTAssertNil(groupPermission)
+    XCTAssertNotNil(groupPermission)
+    
+    XCTAssertEqual(groupPermission?.objectID, "1")
+    XCTAssertEqual(groupPermission?.type, "group-permissions")
+    
+    XCTAssertNotNil(groupPermission?.links)
+    
+    XCTAssertNil(groupPermissionAttributes)
   }
 }
 

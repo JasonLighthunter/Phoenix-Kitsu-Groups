@@ -154,8 +154,16 @@ class GroupNeighborTests: XCTestCase {
     } else {
       groupNeighbor = nil
     }
+    groupNeighborAttributes = groupNeighbor?.attributes
     
-    XCTAssertNil(groupNeighbor)
+    XCTAssertNotNil(groupNeighbor)
+    
+    XCTAssertEqual(groupNeighbor?.objectID, "1")
+    XCTAssertEqual(groupNeighbor?.type, "groupNeighbors")
+    
+    XCTAssertNotNil(groupNeighbor?.links)
+    
+    XCTAssertNil(groupNeighborAttributes)
   }
   
   func testGroupNeighborInvalidNilData() {
@@ -167,7 +175,15 @@ class GroupNeighborTests: XCTestCase {
     } else {
       groupNeighbor = nil
     }
+    groupNeighborAttributes = groupNeighbor?.attributes
     
-    XCTAssertNil(groupNeighbor)
+    XCTAssertNotNil(groupNeighbor)
+    
+    XCTAssertEqual(groupNeighbor?.objectID, "1")
+    XCTAssertEqual(groupNeighbor?.type, "groupNeighbors")
+    
+    XCTAssertNotNil(groupNeighbor?.links)
+    
+    XCTAssertNil(groupNeighborAttributes)
   }
 }

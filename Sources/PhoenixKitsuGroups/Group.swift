@@ -1,19 +1,8 @@
 import PhoenixKitsuCore
+import Requestable
 
-public class Group: KitsuObject {
+public class Group: KitsuObject<GroupAttributes>, Requestable {
   public static let requestURLString = "groups"
-
-  public let objectID: String
-  public let type: String
-  public let links: Links
-  public let attributes: GroupAttributes?
-
-  private enum CodingKeys: String, CodingKey {
-    case objectID = "id"
-    case type
-    case links
-    case attributes
-  }
 }
 
 // codebeat:disable[TOO_MANY_IVARS]

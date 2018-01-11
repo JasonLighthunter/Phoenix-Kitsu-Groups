@@ -170,8 +170,16 @@ class GroupTicketMessageTests: XCTestCase {
     } else {
       groupTicketMessage = nil
     }
+    groupTicketMessageAttributes = groupTicketMessage?.attributes
     
-    XCTAssertNil(groupTicketMessage)
+    XCTAssertNotNil(groupTicketMessage)
+    
+    XCTAssertEqual(groupTicketMessage?.objectID, "1")
+    XCTAssertEqual(groupTicketMessage?.type, "groupTicketMessages")
+    
+    XCTAssertNotNil(groupTicketMessage?.links)
+    
+    XCTAssertNil(groupTicketMessageAttributes)
   }
   
   func testGroupTicketMessageInvalidNilData() {
@@ -183,8 +191,16 @@ class GroupTicketMessageTests: XCTestCase {
     } else {
       groupTicketMessage = nil
     }
+    groupTicketMessageAttributes = groupTicketMessage?.attributes
     
-    XCTAssertNil(groupTicketMessage)
+    XCTAssertNotNil(groupTicketMessage)
+    
+    XCTAssertEqual(groupTicketMessage?.objectID, "1")
+    XCTAssertEqual(groupTicketMessage?.type, "groupTicketMessages")
+    
+    XCTAssertNotNil(groupTicketMessage?.links)
+    
+    XCTAssertNil(groupTicketMessageAttributes)
   }
 }
 

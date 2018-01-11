@@ -178,8 +178,16 @@ class GroupReportTests: XCTestCase {
     } else {
       groupReport = nil
     }
+    groupReportAttributes = groupReport?.attributes
     
-    XCTAssertNil(groupReport)
+    XCTAssertNotNil(groupReport)
+    
+    XCTAssertEqual(groupReport?.objectID, "1")
+    XCTAssertEqual(groupReport?.type, "groupReports")
+    
+    XCTAssertNotNil(groupReport?.links)
+    
+    XCTAssertNil(groupReportAttributes)
   }
   
   func testGroupReportInvalidNilData() {
@@ -191,8 +199,16 @@ class GroupReportTests: XCTestCase {
     } else {
       groupReport = nil
     }
+    groupReportAttributes = groupReport?.attributes
     
-    XCTAssertNil(groupReport)
+    XCTAssertNotNil(groupReport)
+    
+    XCTAssertEqual(groupReport?.objectID, "1")
+    XCTAssertEqual(groupReport?.type, "groupReports")
+    
+    XCTAssertNotNil(groupReport?.links)
+    
+    XCTAssertNil(groupReportAttributes)
   }
 }
 

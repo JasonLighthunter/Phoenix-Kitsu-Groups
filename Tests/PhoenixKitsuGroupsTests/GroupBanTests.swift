@@ -58,7 +58,7 @@ class GroupBanTests: XCTestCase {
   ]
   
   let invalidNilDataJSON: [String : Any?] = [
-    "id": nil,
+    "id": "1",
     "type": "groupBans",
     "links": [
       "self": "https://kitsu.io/api/edge/group-bans/1"
@@ -168,8 +168,16 @@ class GroupBanTests: XCTestCase {
     } else {
       groupBan = nil
     }
+    groupBanAttributes = groupBan?.attributes
     
-    XCTAssertNil(groupBan)
+    XCTAssertNotNil(groupBan)
+    
+    XCTAssertEqual(groupBan?.objectID, "1")
+    XCTAssertEqual(groupBan?.type, "groupBans")
+    
+    XCTAssertNotNil(groupBan?.links)
+    
+    XCTAssertNil(groupBanAttributes)
   }
   
   func testGroupBanInvalidNilData() {
@@ -181,8 +189,16 @@ class GroupBanTests: XCTestCase {
     } else {
       groupBan = nil
     }
+    groupBanAttributes = groupBan?.attributes
     
-    XCTAssertNil(groupBan)
+    XCTAssertNotNil(groupBan)
+    
+    XCTAssertEqual(groupBan?.objectID, "1")
+    XCTAssertEqual(groupBan?.type, "groupBans")
+    
+    XCTAssertNotNil(groupBan?.links)
+    
+    XCTAssertNil(groupBanAttributes)
   }
 }
 

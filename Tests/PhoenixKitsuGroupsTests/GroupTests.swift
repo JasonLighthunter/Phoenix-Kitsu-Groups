@@ -36,20 +36,20 @@ class GroupTests: XCTestCase {
         "meta": [
           "dimensions": [
             "tiny": [
-              "width": "width",
-              "height": "height"
+              "width": 1,
+              "height": 2
             ],
             "small": [
-              "width": "width",
-              "height": "height"
+              "width": 1,
+              "height": 2
             ],
             "medium": [
-              "width": "width",
-              "height": "height"
+              "width": 1,
+              "height": 2
             ],
             "large": [
-              "width": "width",
-              "height": "height"
+              "width": 1,
+              "height": 2
             ]
           ]
         ]
@@ -62,16 +62,16 @@ class GroupTests: XCTestCase {
         "meta": [
           "dimensions": [
             "tiny": [
-              "width": "width",
-              "height": "height"
+              "width": 1,
+              "height": 1
             ],
             "small": [
-              "width": "width",
-              "height": "height"
+              "width": 1,
+              "height": 1
             ],
             "large": [
-              "width": "width",
-              "height": "height"
+              "width": 1,
+              "height": 1
             ]
           ]
         ]
@@ -322,8 +322,16 @@ class GroupTests: XCTestCase {
     } else {
       group = nil
     }
+    groupAttributes = group?.attributes
     
-    XCTAssertNil(group)
+    XCTAssertNotNil(group)
+    
+    XCTAssertEqual(group?.objectID, "1")
+    XCTAssertEqual(group?.type, "groups")
+    
+    XCTAssertNotNil(group?.links)
+    
+    XCTAssertNil(groupAttributes)
   }
   
   func testGroupInvalidNilData() {
@@ -335,8 +343,16 @@ class GroupTests: XCTestCase {
     } else {
       group = nil
     }
+    groupAttributes = group?.attributes
     
-    XCTAssertNil(group)
+    XCTAssertNotNil(group)
+    
+    XCTAssertEqual(group?.objectID, "1")
+    XCTAssertEqual(group?.type, "groups")
+    
+    XCTAssertNotNil(group?.links)
+    
+    XCTAssertNil(groupAttributes)
   }
 }
 

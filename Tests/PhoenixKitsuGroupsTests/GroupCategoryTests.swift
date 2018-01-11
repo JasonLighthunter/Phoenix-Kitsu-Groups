@@ -63,7 +63,7 @@ class GroupCategoryTests: XCTestCase {
   ]
   
   let invalidNilDataJSON: [String : Any?] = [
-    "id": nil,
+    "id": "1",
     "type": "groupCategories",
     "links": [
       "self": "https://kitsu.io/api/edge/group-categories/1"
@@ -177,8 +177,16 @@ class GroupCategoryTests: XCTestCase {
     } else {
       groupCategory = nil
     }
+    groupCategoryAttributes = groupCategory?.attributes
     
-    XCTAssertNil(groupCategory)
+    XCTAssertNotNil(groupCategory)
+    
+    XCTAssertEqual(groupCategory?.objectID, "1")
+    XCTAssertEqual(groupCategory?.type, "groupCategories")
+    
+    XCTAssertNotNil(groupCategory?.links)
+    
+    XCTAssertNil(groupCategoryAttributes)
   }
   
   func testGroupCategoryInvalidNilData() {
@@ -190,8 +198,16 @@ class GroupCategoryTests: XCTestCase {
     } else {
       groupCategory = nil
     }
+    groupCategoryAttributes = groupCategory?.attributes
     
-    XCTAssertNil(groupCategory)
+    XCTAssertNotNil(groupCategory)
+    
+    XCTAssertEqual(groupCategory?.objectID, "1")
+    XCTAssertEqual(groupCategory?.type, "groupCategories")
+    
+    XCTAssertNotNil(groupCategory?.links)
+    
+    XCTAssertNil(groupCategoryAttributes)
   }
 }
 

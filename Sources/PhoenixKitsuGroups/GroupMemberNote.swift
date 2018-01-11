@@ -1,19 +1,8 @@
 import PhoenixKitsuCore
+import Requestable
 
-public class GroupMemberNote: KitsuObject {
+public class GroupMemberNote: KitsuObject<GroupMemberNoteAttributes>, Requestable {
   public static var requestURLString = "group-member-notes"
-  
-  public let objectID: String
-  public let type: String
-  public let links: Links
-  public let attributes: GroupMemberNoteAttributes?
-  
-  private enum CodingKeys: String, CodingKey {
-    case objectID = "id"
-    case type
-    case links
-    case attributes
-  }
 }
 
 public class GroupMemberNoteAttributes: KitsuObjectAttributesWithTimestamp {

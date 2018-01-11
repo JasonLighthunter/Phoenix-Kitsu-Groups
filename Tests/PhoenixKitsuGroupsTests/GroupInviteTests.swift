@@ -175,8 +175,16 @@ class GroupInviteTests: XCTestCase {
     } else {
       groupInvite = nil
     }
+    groupInviteAttributes = groupInvite?.attributes
     
-    XCTAssertNil(groupInvite)
+    XCTAssertNotNil(groupInvite)
+    
+    XCTAssertEqual(groupInvite?.objectID, "1")
+    XCTAssertEqual(groupInvite?.type, "groupInvites")
+    
+    XCTAssertNotNil(groupInvite?.links)
+    
+    XCTAssertNil(groupInviteAttributes)
   }
   
   func testGroupInviteInvalidNilData() {
@@ -188,8 +196,16 @@ class GroupInviteTests: XCTestCase {
     } else {
       groupInvite = nil
     }
+    groupInviteAttributes = groupInvite?.attributes
     
-    XCTAssertNil(groupInvite)
+    XCTAssertNotNil(groupInvite)
+    
+    XCTAssertEqual(groupInvite?.objectID, "1")
+    XCTAssertEqual(groupInvite?.type, "groupInvites")
+    
+    XCTAssertNotNil(groupInvite?.links)
+    
+    XCTAssertNil(groupInviteAttributes)
   }
 }
 

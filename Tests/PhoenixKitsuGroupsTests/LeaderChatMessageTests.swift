@@ -183,8 +183,16 @@ class LeaderChatMessageTests: XCTestCase {
     } else {
       leaderChatMessage = nil
     }
+    leaderChatMessageAttributes = leaderChatMessage?.attributes
     
-    XCTAssertNil(leaderChatMessage)
+    XCTAssertNotNil(leaderChatMessage)
+    
+    XCTAssertEqual(leaderChatMessage?.objectID, "1")
+    XCTAssertEqual(leaderChatMessage?.type, "leaderChatMessages")
+    
+    XCTAssertNotNil(leaderChatMessage?.links)
+    
+    XCTAssertNil(leaderChatMessageAttributes)
   }
   
   func testLeaderChatMessageInvalidNilData() {
@@ -196,8 +204,16 @@ class LeaderChatMessageTests: XCTestCase {
     } else {
       leaderChatMessage = nil
     }
+    leaderChatMessageAttributes = leaderChatMessage?.attributes
     
-    XCTAssertNil(leaderChatMessage)
+    XCTAssertNotNil(leaderChatMessage)
+    
+    XCTAssertEqual(leaderChatMessage?.objectID, "1")
+    XCTAssertEqual(leaderChatMessage?.type, "leaderChatMessages")
+    
+    XCTAssertNotNil(leaderChatMessage?.links)
+    
+    XCTAssertNil(leaderChatMessageAttributes)
   }
 }
 

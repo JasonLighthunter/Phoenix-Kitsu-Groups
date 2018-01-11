@@ -1,19 +1,8 @@
 import PhoenixKitsuCore
+import Requestable
 
-public class GroupReport: KitsuObject {
+public class GroupReport: KitsuObject<GroupReportAttributes>, Requestable {
   public static var requestURLString = "group-reports"
-  
-  public let objectID: String
-  public let type: String
-  public let links: Links
-  public let attributes: GroupReportAttributes?
-  
-  private enum CodingKeys: String, CodingKey {
-    case objectID = "id"
-    case type
-    case links
-    case attributes
-  }
 }
 
 public class GroupReportAttributes: KitsuObjectAttributesWithTimestamp {
